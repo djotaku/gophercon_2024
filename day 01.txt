@@ -54,4 +54,56 @@ Exploring Go Compiler: Adding a "four" loop
 -------------
 
 
+Advanced Generics Patterns
+
+@merovius@chaos.social
+
+according to reddit and some blog posts - it seems most folks are not using Generics since their addition in 1.18
+
+The Basics
+
+type Slice[E any] []E
+
+A type parameter can be inferrred if and only if it appears in an argument
+
+Corollary: If you want a type parameter to be inferrable.... (see slide)
+
+Constraints
+
+How can you stringify a generic type? One way is to list all the potential types for your Generic (making sure these are all types that can be stringified)
+
+Or you can have a method constraint.
+
+But you can't do both types of things (method constraint and listing types)
+
+Or you don't have constraints, but you accept a function.
+
+Overall, the thesis of the talk is that we need to "break" Generics. What they mean is that by pushing the boundaries of what can be done with generics we determine how the standard library should evolve to allow for an increased usage of generics.
+
+----------------
+
+Building a Deterministic Interpreter in Go: Readability vs Performance
+
+
+From Gno.land
+
+created CosmosSDK - most popular SDK for Go blockchain development
+
+They came up with GnoVM to allows seamless interoperability of untrusted programs
+
+gRPC can somewhat solve the problem, but less elegantly than what Gno.Land proposes
+
+So they use smart contracts - which allow untrusted programs to interact
+
+Go typically not used for smart contract programming. (Even if it is often used for programming the underlying blockchain)
+
+WASM allows for running unsafe code like containers, but less overhead
+
+Reason to now simply use WASM is that it relys on the actor model (message passing)
+
+Gno.Land's solution to the WASM issue is the GnoVM. It interprets the Go language.
+
+The VM is written in Go.
+
+All changes are tracked during execution and persisted (saved to disk) at the end of hte user's program
 
