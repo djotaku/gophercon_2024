@@ -1,0 +1,44 @@
+keynote - history about Go - Ron Evans
+
+"Go not for embedded programming" - but speaker created Gobot to use Go to program a drone
+
+"Everyone knows you have to use Python or C++ for computer vision" - speaker ignores this and creates a Go library for OpenCV
+
+YOLO is a computer vision tracking model
+
+"Everyone knows you need to use C or C++ for microcontrollers" - but the speaker and another person create TinyGo
+
+LLM demo with talking heads.
+    - LangChainGo
+    - Dollheads will use TinyGo to contorll them.
+
+
+Instead of AI (artificiatl intel), AI - amplification intelligence
+
+-----
+
+Build a Glamorous Habit Tracker using Charm CLII
+
+Ideal Habit Tracker?
+
+    - speaker started playing clarinet and needed to be consistent to learn how to play well.Wanted to track how much they were playing during the week to be able to tell their instructor.
+    - They have a struct to hold a Habit. (ID, Name, Desc, Target, TicksCount)
+    - They wanted to design it on CLI vs a phone app
+    - TUI constraints
+        - display strings
+        - print logs in a file
+        - handle errors properly
+    - Charm_ (underscore is part of the name)
+        - libs`
+            - bubbles
+            - bubble tea
+            - lip gloss
+            - glamour
+    - Bubble Tea - based on Elm Architecture. MVU (Model, view, Update)
+    -
+
+What is Charm?
+
+Demo
+
+Charm Cheatsheet
