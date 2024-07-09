@@ -212,4 +212,77 @@ Miles to Go... Golang for Competitive Programming
 
 Saving African Savannah Wildlife with Go-MQTT
 
+GPS tracking - using devices to trakc wildlife movements and Big Data to predict peaching hotspots and patterns
 
+challenges
+    - internet expensive
+    - unreliable internet
+    - redoce cost of anti-poaching operations
+
+System requirements
+    - low bw and high latency environs
+    - scalable
+    - secure
+
+MQTT meets their needs esp around low bandwidth and high latency
+
+Go works very well in resource-contrained devices
+
+paho.golang is the lib for MQTT v5. There's also one for v3.
+
+As of now it's working for locatoin tracking and health monitoring.
+
+-------------------
+
+Building a programmable Firewall with Go
+
+nftables - at their company they wanted to be able to modify and access it programatticaly with Go.
+
+-----
+
+Prototyping a Go, GraphQL, gRPC Microservice
+
+This ended up becoming a product at the workplace of the speaker
+
+In addition to questions that prototyping answers is that it also works a teaching aid (including how your codebase works) - in other words, good to train new devils
+
+See slide on Prototyping essentions -
+
+dos:
+    - document process and pros/cons
+    - use existing libs and frameworks
+    - use useful logs
+
+don'ts:
+    - overcomplicate
+    - make asumptions aobut the target audience
+    - build more than necessary
+
+
+app <-> graphql <-> DB <-> gRPC <-> other db
+
+GraphQL
+
+    - More flexiby querying - more powerful than REST
+    - front-end dev friendly - they have the front-end devs make the PRs for some of the GraphQL
+    - fewer server request
+    - powerful pagination
+
+gqlgen - Go GraphQL schema generator
+
+They create the resolver stubs. You add your logic to that.
+
+gRPC and protobuf - service to service comms (no client requests)
+
+    - fast and erfficient
+    - http/2 - can send multiple data streams at once without blocking
+    - Protocol Buffers - binary serialization
+    - clear Proto schema
+
+Use program buf to generate the yaml
+
+----------------
+
+Closing Talk: A Decade of Debugging
+
+a review of how Delve has evolved
