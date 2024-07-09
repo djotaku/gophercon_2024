@@ -107,3 +107,21 @@ The VM is written in Go.
 
 All changes are tracked during execution and persisted (saved to disk) at the end of hte user's program
 
+Lessons Learned
+
+     - Primitive types stored as interface vars allocate pointers under the hood (starting with Go 1.4)
+     - Avoid switching on interfaces when type-switches will do. Comparing 2 interface values is slow.
+     - Scope != Allocation; ie for loops and GOTO statements
+     - Go reflection is limited. Cannot create named types, recursive types, or interfaces
+
+
+Future work
+
+    - Upgrading the logic will be difficult
+    - Updating a function or metho w/ same sig is OK
+    - Appending fields to a struct will break old logic
+    - Appending methods to declared types will break old logic that uses type checks
+    - intra-transaction garbage collection. It's currently a little more complex. Gno doens't know when Go has garbage collected an object. When Gno memory limit is reached it will re-count everything reachable from the Gno VM
+    - they have some ways to fix these issues.
+
+
