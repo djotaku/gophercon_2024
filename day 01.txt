@@ -28,6 +28,8 @@ Ideal Habit Tracker?
         - display strings
         - print logs in a file
         - handle errors properly
+
+What is Charm_?
     - Charm_ (underscore is part of the name)
         - libs`
             - bubbles
@@ -35,10 +37,21 @@ Ideal Habit Tracker?
             - lip gloss
             - glamour
     - Bubble Tea - based on Elm Architecture. MVU (Model, view, Update)
+    - (see slides for the models involved)
     -
-
-What is Charm?
 
 Demo
 
+
 Charm Cheatsheet
+
+-------------
+
+Exploring Go Compiler: Adding a "four" loop
+
+(see talk - lots of code and flow diagrams)
+
+-------------
+
+
+
