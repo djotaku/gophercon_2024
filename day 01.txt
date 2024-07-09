@@ -125,3 +125,91 @@ Future work
     - they have some ways to fix these issues.
 
 
+------------
+
+Lightning Talks
+
+How About Now? Can ChatGPT do my job yet? (a reprise of last year's talk).
+    - Last year it wasn't able to do the assignment well.
+    - The answer is still no....
+    - But what is it good at and should we use it at work?
+    - AI currently in its hype phase
+    - Each training run costs $65M-$100M
+    - Therefore the promises keep coming... along with the hope you will start using AI
+    - Now is the time to learn and experiment so you can get good at using it as another tool
+    - Author asked it to write a URL shortener in Go. (Key is that it was quite a few paragraphs to get a good, useful tool that would run without changing anything)
+
+imprementing code coverage with toolexec
+
+    - This is an exercise in learning more about how Go works by writing a coverage tool. Author says better to use the bulit-in coverage tool for your projects.
+
+Parquet and Go
+
+    - Parquet is a file format for big data
+
+Standardizing Errors in Go: A practical guide with Dapr
+
+    - Dapr - distributed app runtime
+    - LOTS of error details, but it helps the error be more useful for your users
+
+A story of channels
+
+    - game - they're pairing users
+    - how to notify both users about the match? How to implement quitting?
+    - Instead of using a queue or map, use channel. Communication is a match. What's been communicated is when there's a match
+    - on one slide - solved all their problems (so far) in 23 lines of code
+    - Communication deduplicates state. Channels turned state into control flow.
+    - Generics helped with Act II
+    - Type parameters are more than just generics, they make code modular
+
+Miles to Go... Golang for Competitive Programming
+
+    - competitive programming?
+
+    A timed sport where you solve problems through programs. Take input from STDIN and writes to STDOUT
+
+    Platforms have RAM limits, etc
+
+    Types: timed, linline&self-paced, sponsored
+
+    what matters? Correcetness in solution and resources used (CPU/Memory)
+
+    - go pros
+
+        - easy stringf processing and input
+        - core map and slice are freq used in prob solutions
+        - easy to scale concurrency
+
+    - go cons
+
+        - support for recent compilors i mixed - some don't even support Go
+        - most problems not parallizable
+        - std lacks in DSA
+        - Go is verbose; longeer to compile
+
+    Competitive programming is anti-Go. It's the opposite of engineering. Not code you need to maintain - throwaway code.
+
+    - Benchmarking
+
+        - built-in to Go command/testing
+        - Benchstat computes A/B comparisons
+
+
+7 Surprising Features of Go Playground
+
+    - It's a good way to share ideas using Go code because it's interactive
+    - You can use a local network in playgrournd and communicate between go routines.
+    - support for pulling in external modules (starting 2019). Can be quicker than creating a new local project.
+    - You can define a go.mod file. (You can create other files and directories)
+    - read/write files using the playgrounds in-mem filesystem.
+    - can write tests and the playground will run them as tests
+    - clear th eterminal by printing "\x0c". Create cool text effects
+    - can display an image by printing IMAGE" followed by a base64 encoding of an image
+    - goplay.tools
+    - goplay.space - includes a turtle graphics mode
+
+--------------
+
+Saving African Savannah Wildlife with Go-MQTT
+
+
