@@ -147,20 +147,56 @@ Build It!~ With or without tools
     there are some times where Go isn't the best tools
 
 
+You Can Store that in a contianer registry?!
 
+    Essentially it's just a blob store. Blog being binary form of content addressible by the reigstry
+
+    endpoint/namespace/artifact <- how to refer to an artifact in a registry
+
+    The artifact is just a pointer to the Manifest
+
+    ORAS - OCI Reistry as Storage
+
+
+Would you like a GUI with that?
+
+    ProntoGUI - a fast way to build a GUI in GO
+
+    App in Flutter does the rendering - gives it gesture detection, Material, and cross-platform
+
+    Embodiments of primitives look/behave how you want
+
+    gRPC to send updates to the app and get information from the App
+
+
+
+Embracing the Replace
+
+    HashiCorp Packer - builds immutable artifacts for cloud providers and hypervisors
+
+    Broken Dependencies -
+
+    Replace in go mod redirects where the lib is being grabbed from
 
 
 ------
 
 A 10-Year Retrospective on Building an Infrastructure Start-up in Go
 
+A LOT has improved in the Go landscape
+
+
 ------
 
 Processing Millions of Events Per Second Reliably Using Generics
 
+lots of good info here. Need to re-watch the talk
+
 -----
 
 Building a Self-Regulating Pressure Relief Mechanism in Go
+
+
 
 -----
 
