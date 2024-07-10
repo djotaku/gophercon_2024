@@ -104,6 +104,52 @@ demo
 
 Lightning Talks
 
+How to Mock your Coworkers without a trip to HR
+
+    mocks for testing
+
+    lots of benefits to mocks - like no need ot have database running, no pre-/post-test scripts
+
+    many mock frameworks - moq, mock (testify, google, and uber versions)
+
+    exporting your mocks for others to use can cause issues
+
+    can cause issues if you change to another mock frameworks
+
+    better - write or generate your mocks internal to your project
+
+    you can use thing_mock_test.go
+
+    install your mock generators in a non-global folder
+
+
+Lightning-Fast Database Tests
+
+    using pgtrestdb
+
+    Techniques may be portable outside of postgres (this package is mostly for postgres)
+
+    Databases are usually the slowest tests - some reasons include speed of startup and shutdown
+
+    pgtestdb - creates ephemeral Postgres dbs quickly; uses template databases; supports parallel testing; deletes test databases on successful tests; each test runs in an isolate database
+
+    Better than containers if you have a lot of tests that need to run at once
+
+    A template with 1k migrations takes 500ms to create
+
+
+Build It!~ With or without tools
+
+    between hiring someone else to do something or building it yourself - you learn more skills if you do it yourself
+
+    relating coding to home renovation
+
+    there are some times where Go isn't the best tools
+
+
+
+
+
 ------
 
 A 10-Year Retrospective on Building an Infrastructure Start-up in Go
@@ -119,5 +165,4 @@ Building a Self-Regulating Pressure Relief Mechanism in Go
 -----
 
 Go in the Smallest of Places <- unale to attend due to needing ot get to flight back home. Look for it online.
-
 
