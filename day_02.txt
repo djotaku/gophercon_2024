@@ -1,0 +1,53 @@
+Who Tests the Tests?
+
+go test -cover # unit tests
+go build -cover # intergration tests
+
+A metric that becomes a goal stops bein ga good metric  - basically you end up gamifying things and people stop when they reach the goal.
+
+Also, people may end up testing things they don't need to test like the main function so they can reach the target for coverage
+
+Example of a faked test that will never fail and make 100% code coverage
+
+Testing mutants - if the fest fails the mutatn was killed. If it passes the mutant survived. Measure the quality of the test suite by how many mutants it kills
+
+-------------
+
+Interface internals
+
+Interface variables bridge the gap betweeen static and dynamic worlds
+
+Interfaces are just 2 word structs
+
+-----------
+
+Building a High-Performance Concurrent Map in Go
+
+Why do we need a concurrent safe map? if use go routines to read/write a bult-in map at the same time, it will panic
+
+How to build a concurrent safe map in go?
+
+sync.Map - a concurrent-safe map provided by the stdlib
+
+map[K]V + sync.RWMutex
+
+sync.map takes twice as long to do its operations vs the mutex
+
+Reason that it's slower is because it was designed to solve cache contention; (it IS faster for the load-only case)
+
+If you're usimg map as a concurrent cache, the performance will not be good enough
+
+RWMAP - only one write op at a time, but multiple reads allowed concurrently
+
+    - Write ends up blocking the entire map
+
+One solution is a shared map. Each key is its own map (at least that's how it seems from the image on the slide)
+
+How many maps needed to create the shared map?
+    - X CPU cores -> X read-write mutex maps in the shared map
+    - hash function determins which map a key should go to
+
+In the example benchmark, the shared map is twice as fast as the RWMap; However, it does require more memory
+
+Eventually they end up using a linked list to make things even more efficient.
+
